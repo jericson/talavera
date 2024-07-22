@@ -2,7 +2,7 @@
 
 Source for Talavera, an 18-card game inspired by Azul.
 
-![Talavera tile steps](steps.jpg)
+![Talavera tile steps](./steps.jpg)
 
 ## Components
 
@@ -71,7 +71,7 @@ The tie breaker is fewest excess tiles.
 
 ## Solo rules
 
-As in the two-player game, Solo Talavera consists of 4 rounds of two phases.
+As in the two-player game, solo Talavera consists of 4 rounds of two phases.
 
 ### Draft phase (solo)
 
