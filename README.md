@@ -43,7 +43,7 @@ keep. Rotate your cards so that the color you want to keep is to the
 top and right. Layer the cards on the table so that all the tiles of the selected
 color are visible.
 
-> **Note**: Only the top right tile count. Tiles of other colors don't
+> **Note**: Only the top right tiles count. Tiles of other colors don't
 > matter one way or another.
 
 
@@ -81,7 +81,7 @@ If you place _any_ excess tiles, you have lost the game.
 ## Design notes
 
 I designed this game for the second [Decision Space
-Jam](https://www.decisionspacepodcast.com/decisionspacejam)---18
+Jam](https://www.decisionspacepodcast.com/decisionspacejam) — 18
 Cards. Talavera was inspired by [my all-time favorite
 game](https://jlericson.com/2023/10/02/top10.html),
 [Azul](https://jlericson.com/2020/01/04/azul-review.html). I've tried
@@ -107,9 +107,13 @@ tiles on all 18 cards to avoid card counting. He also came up with the
 idea for giving the first player to draft a choice of two cards
 instead of all four.
 
+I'm considering an explicit cooperative mode. One of the things I like
+about Azul is that people naturally play in the interest of their own
+goals without worrying too much about other players. Cutthroat play
+comes with experience. I'm concerned Talavera skips the more relaxed
+way to play.
 
-
-Drafting games resist satisfying solo mode. There is [a fan-made solo
+Drafting games resist a satisfying solo mode. There is [a fan-made solo
 mode for
 Azul](https://boardgamegeek.com/filepage/164052/soloplay-azul-v1pdf),
 but Azul shines when another player's decisions impact yours. A puzzly
