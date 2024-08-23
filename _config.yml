@@ -17,14 +17,14 @@ title: Talavera
 email: jon@jlericson.com
 description: An 18-card game inspired by Azul.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jlericson.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jlericson
 github_username:  jericson
 repository: jericson/talavera
 
 # Build settings
 markdown: kramdown
-emote_theme: pages-themes/architect@v0.2.0
+remote_theme: pages-themes/architect@v0.2.0
 #theme: minima
 #google_analytics: [UA-61223164-4]
 plugins:
