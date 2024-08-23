@@ -9,8 +9,8 @@ specifications.
 
 ## Components
 
-Print [the cards](cards.pdf) double-sided (long edge) on card stock or
-single-sided to put in card sleeves. 
+Print [the cards](cards.pdf) double-sided on card stock or
+single-sided to put in card sleeves.
 
 One side represents an **order card**. Each of the four colors has a
 number, which represents the customer's order for that type of tile.
@@ -39,21 +39,42 @@ player will have two cards to place.
 ### Placement phase
 
 When each player has two cards, they must pick which color to
-keep. Rotate your cards so that the color you want to keep is to the
-top and right. Layer the cards on the table so that all the tiles of the selected
-color are visible.
+keep. Place the cards one corner of the order card to show they've
+filled that order.
 
-> **Note**: Only the top right tiles count. Tiles of other colors don't
-> matter one way or another.
+> **Note**: Only the tiles of that color count toward your score. 
 
 
 ### Winning
 
-Players are only eligible to win if they have fulfilled their
-customer's order. That means having _at least_ as many tiles as listed
-on the order card for that color.
+In order to fill an order, there must be _at least_ as many tiles of
+that color as indicated by the number on the order. Score each order
+separately and add up the total score.
 
-The tie breaker is fewest excess tiles.
+* Each fulfilled order is 3 points.
+* Subtract 1 point for each excess tile. Orders can't go below 0.
+* If there are fewer of a color than required, the order is worth 0 points.
+
+> **Example: The first order is for 3 yellow tiles. The player placed
+> 4 yellow tiles, so they completed the order with one excess
+> tile. That order is worth 2 points (3 - 1). 
+>
+> The next order is for 2 red tiles, but the player didn't place any
+> red tiles on the order. That's worth 0 points because the order
+> wasn't fulfilled.
+>
+> The third order was for 4 sky blue tiles and the player had exactly
+> that. It's worth 3 points for fulfilling the order exactly.
+> 
+> Finally the 1 azure (dark blue) tile was ordered. The player placed
+> 5 tiles of that color and scored 3 points for filling the order and
+> lost 4 points for excess tiles. Since the score for an order can
+> never go below zero, it scores 0 points.
+
+Add the total score for all four orders and highest score wins.
+
+In case of a tie, congratulate each other on a job well done!
+
 
 ## Solo rules
 
@@ -110,20 +131,27 @@ instead of all four.
 I'm considering an explicit cooperative mode. One of the things I like
 about Azul is that people naturally play in the interest of their own
 goals without worrying too much about other players. Cutthroat play
-comes with experience. I'm concerned Talavera skips the more relaxed
-way to play.
+comes with experience. 
+
+Based on player feedback, I added a simple scoring system to encourage
+a more relaxed way to play. It's still a zero sum game, but scoring
+makes it possible to lose by a small amount. Often a close game feels
+better for the loser than a binary win or lose end state.
+
 
 Drafting games resist a satisfying solo mode. There is [a fan-made solo
 mode for
 Azul](https://boardgamegeek.com/filepage/164052/soloplay-azul-v1pdf),
 but Azul shines when another player's decisions impact yours. A puzzly
-solo mode that takes 5-10 minutes from setup to completion seems like
+solo mode that takes 5 minutes from setup to completion seems like
 a decent accomplishment.
 
 Speaking of which, I was pleasantly surprised that I was able to make
 my card representation of tiles enjoyable to arrange on the table. I
 took inspiration from the splaying mechanism of Innovation to design
-the tile cards. 
+the tile cards. An early version of the game required splaying tiles,
+but the current version allows players to fiddle with their cards as
+much or as little as they like.
 
 I'm not entirely happy with the simple color squares. I used [Talavera
 tiles](https://www.lafuente.com/Mexican-Decor/Talavera-Pottery/Talavera-Tile/)
