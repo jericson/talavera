@@ -55,7 +55,7 @@ separately and add up the total score.
 * Subtract 1 point for each excess tile. Orders can't go below 0.
 * If there are fewer of a color than required, the order is worth 0 points.
 
-> **Example: The first order is for 3 yellow tiles. The player placed
+> **Example**: The first order is for 3 yellow tiles. The player placed
 > 4 yellow tiles, so they completed the order with one excess
 > tile. That order is worth 2 points (3 - 1). 
 >
