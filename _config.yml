@@ -24,12 +24,13 @@ repository: jericson/talavera
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-architect
+emote_theme: pages-themes/architect@v0.2.0
 #theme: minima
 #google_analytics: [UA-61223164-4]
 plugins:
   - jekyll-feed
   - jekyll-readme-index
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
