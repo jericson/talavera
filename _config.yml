@@ -18,8 +18,8 @@ email: jon@jlericson.com
 
 # Build settings
 markdown: kramdown
-#remote_theme: pages-themes/architect@v0.2.0
-theme: minima
+remote_theme: pages-themes/architect@v0.2.0
+#theme: minima
 #google_analytics: [UA-61223164-4]
 plugins:
   - jekyll-remote-theme
