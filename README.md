@@ -24,7 +24,7 @@ fulfill their customer's order.
 Talavera consists of 4 rounds of two phases. Shuffle the cards and
 give each player an order card. Randomly decide on a first player for
 the first round. Each round, swap who drafts first so that each player
-has drafts first twice.
+drafts first twice over the course of the game.
 
 ### Draft phase
 
@@ -44,8 +44,15 @@ filled that order.
 
 > **Note**: Only the tiles of that color count toward your score. 
 
+Continue drafting and placing tiles until all the cards are gone and
+both players have covered all four orders. (Don't forget to swap who
+drafts first!)
 
 ### Winning
+
+When all the cards have been drafted and both players have all four
+corners covered, the game is over and each player evaluates how well
+they completed the orders.
 
 In order to fill an order, there must be _at least_ as many tiles of
 that color as indicated by the number on the order. Score each order
@@ -78,7 +85,10 @@ In case of a tie, congratulate each other on a job well done!
 
 ## Solo rules
 
-As in the two-player game, solo Talavera consists of 4 rounds of two phases.
+As in the two-player game, solo Talavera consists of 4 rounds of two
+phases. However, instead of completing specific orders, the goal is to
+decorate a flight of stairs with 4 different colors. Ignore the
+numbers on the order card.
 
 ### Draft phase (solo)
 
@@ -87,16 +97,32 @@ card. Deal two cards from the bottom of the deck with their tile
 side face up. Select one card and discard the other. Repeat the
 process with two more cards so that you have a two tile cards to place.
 
+**Once per game**: Instead of taking one of a pair of cards, discard
+both cards and randomly draw a card from the deck to keep. 
+
 ### Placement phase (solo)
 
-As in the two-player game, rotate your two cards so that all the tiles
-of the chosen color are visible.
+As in the two-player game, cover one corner of the order card with the
+tiles of that color.
+
+
+**Unlike the two player game**: ignore the order number. As long as
+you have sets (1, 2, 3, and 4) of four different colors, you can win
+the game.
 
 ### Winning (solo)
 
-The only way to win is by fulfilling the customer's order _exactly_.
+The only way to win is to place sets of _exactly_ 1, 2, 3, and 4
+tiles of different colors.
 
 If you place _any_ excess tiles, you have lost the game.
+
+> **Example**: If you have placed 2 yellow, 3 reds, and 4 azure tiles,
+> you must draft exactly 1 sky blue tiles to win. 
+
+**Extra special win**: place _exactly_ the customer's order according
+to the numbers on the order card. (Warning: this involves quite a bit
+of luck!)
 
 
 ## Design notes
@@ -161,3 +187,4 @@ designs. This would have the added advantage of avoiding problems for
 colorblind players.
 
 <!-- LocalWords: Talavera Azul puzzly --> 
+
