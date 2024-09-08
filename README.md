@@ -15,7 +15,7 @@ single-sided to put in card sleeves.
 One side represents an **order card**. Each of the four colors has a
 number, which represents the customer's order for that type of tile.
 
-The others side of the cards have four squares (**tiles**) grouped by
+The other side of the cards have four squares (**tiles**) grouped by
 color. Players will take turns drafting these cards in order to
 fulfill their customer's order.
 
@@ -39,8 +39,8 @@ player will have two cards to place.
 ### Placement phase
 
 When each player has two cards, they must pick which color to
-keep. Place the cards one corner of the order card to show they've
-filled that order.
+keep. Place the cards so that they cover one corner of the order card
+to show which color of tile was placed.
 
 > **Note**: Only the tiles of that color count toward your score. 
 
@@ -117,8 +117,9 @@ tiles of different colors.
 
 If you place _any_ excess tiles, you have lost the game.
 
-> **Example**: If you have placed 2 yellow, 3 reds, and 4 azure tiles,
-> you must draft exactly 1 sky blue tiles to win. 
+> **Example**: Starting the fourth and final draft phase, you have
+> placed 2 yellow, 3 reds, and 4 azure tiles. In order to win, you
+> must draft exactly 1 sky blue tiles.
 
 **Extra special win**: place _exactly_ the customer's order according
 to the numbers on the order card. (Warning: this involves quite a bit
