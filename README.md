@@ -38,11 +38,16 @@ player will have two cards to place.
 
 ### Placement phase
 
-When each player has two cards, they must pick which color to
-keep. Place the cards so that they cover one corner of the order card
-to show which color of tile was placed.
+When you have two cards, you must decide which color tiles to
+keep. Tuck each card under one corner of the order card to show which
+color of tile was placed. Be sure to leave the corresponding tiles
+visible.
 
 > **Note**: Only the tiles of that color count toward your score. 
+
+You may place both cards on the same color or different colors. You
+may also add tiles to a color you have already placed. You must add a
+card to a color represented by at least one tile on that card.
 
 Continue drafting and placing tiles until all the cards are gone and
 both players have covered all four orders. (Don't forget to swap who
@@ -102,13 +107,17 @@ both cards and randomly draw a card from the deck to keep.
 
 ### Placement phase (solo)
 
-As in the two-player game, cover one corner of the order card with the
-tiles of that color.
+**Unlike the two-player game**, cover one corner of the order card with
+all the tile cards you selected that round. However, you may place
+cards on a corner that does not have a corresponding tile.
+
+> **Example**: If you have a card with one red tile and the other has
+> no red tiles, you may place both cards on the red corner to claim
+> one red tile. 
 
 
-**Unlike the two player game**: ignore the order number. As long as
-you have sets (1, 2, 3, and 4) of four different colors, you can win
-the game.
+You may ignore the order number in the solo game. As long as you have
+sets (1, 2, 3, and 4) of four different colors, you can win the game.
 
 ### Winning (solo)
 
@@ -187,5 +196,22 @@ At some point I might replace the solid squares with authentic tile
 designs. This would have the added advantage of avoiding problems for
 colorblind players.
 
+<!--
+In Talavera, all information is open so the market can be manipulated to force your opponent to take cards they don't want or leave cards you need. Even though it's a 5 minute game, there are strategic considerations for placing tiles.
+
+---
+
+Talavera is an 18-card game inspired by Azul. Players compete to decorate a flight of stairs according to customer specifications. Each player starts with a unique set of orders that must be completed to score points.
+
+Players take turns drafting tile cards from the market. After taking two cards, they decide which color of tiles to place. If they include excess tiles, they pay a penalty during final scoring.
+
+Talavera takes about 5 minutes. Each choice requires evaluating not just your own position, but your opponent's situation as well. 
+
+Talavera also includes a solo mode in which you must decorate the stairs without wasting any tiles. For an extra challenge, complete a predetermined order card.
+
+
+-->
+
 <!-- LocalWords: Talavera Azul puzzly --> 
+
 
