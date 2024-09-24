@@ -49,9 +49,8 @@ You may place both cards on the same color or different colors. You
 may also add tiles to a color you have already placed. You must add a
 card to a color represented by at least one tile on that card.
 
-Continue drafting and placing tiles until all the cards are gone and
-both players have covered all four orders. (Don't forget to swap who
-drafts first!)
+Continue drafting and placing tiles until all the cards have been
+drafted. (Don't forget to swap who drafts first!)
 
 ### Winning
 
