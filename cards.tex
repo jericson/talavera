@@ -23,7 +23,6 @@
 \definecolor{royalazure}{rgb}{0.0, 0.22, 0.66}
 \definecolor{lightskyblue}{rgb}{0.53, 0.81, 0.98}
 
-%   TikZ/PGF Settings für die Karten
 \def\cardwidth{2.5in}
 \def\cardheight{3.5in}
 
@@ -35,150 +34,93 @@
   square/.style={regular polygon,regular polygon sides=4}
 }
 
+\newcommand{\placetile}[3]{
+  \def\x{#2/10*\cardwidth}
+  \def\y{#3/10*\cardwidth}
+  \def\tilewidth{0.2*\cardwidth}
+  
+  \filldraw[#1,draw=black]
+  (\x,               \y)
+  -- (\x+\tilewidth, \y)
+  -- (\x+\tilewidth, \y+\tilewidth)
+  -- (\x,            \y+\tilewidth)
+  -- cycle;        
+}
+
+\newcommand{\tilecard}[4]{
+\begin{tikzpicture}
+  \draw[black, line width=3pt] \shapeCard;
+
+  \ifnum0#1>0 \placetile{yellow}{1}{11} \fi
+  \ifnum0#1>1 \placetile{yellow}{1}{8} \fi
+  \ifnum0#1>2 \placetile{yellow}{1}{5} \fi
+
+  \ifnum0#2>0 \placetile{royalazure}{7}{11} \fi
+  \ifnum0#2>1 \placetile{royalazure}{7}{8} \fi
+  \ifnum0#2>2 \placetile{royalazure}{7}{5} \fi
+
+  \ifnum0#3>0 \placetile{lightskyblue}{1}{1} \fi
+  \ifnum0#3>1 \placetile{lightskyblue}{1}{4} \fi
+  \ifnum0#3>2 \placetile{lightskyblue}{1}{7} \fi
+
+  \ifnum0#4>0 \placetile{red}{7}{1} \fi
+  \ifnum0#4>1 \placetile{red}{7}{4} \fi
+  \ifnum0#4>2 \placetile{red}{7}{7} \fi
+\end{tikzpicture}}
+
 \newcommand{\threetiles}[2]{
 \begin{tikzpicture}
 
-  \draw[black] \shapeCard;
+  \draw[black, line width=3pt] \shapeCard;
 
-  \filldraw[#1,draw=black]
-  (0.7*\cardwidth,    0.1*\cardwidth)
-  -- (0.9*\cardwidth, 0.1*\cardwidth)
-  -- (0.9*\cardwidth, 0.3*\cardwidth)
-  -- (0.7*\cardwidth, 0.3*\cardwidth)
-  -- cycle;          
-
-  \filldraw[#1,draw=black]
-  (0.7*\cardwidth,    0.4*\cardwidth)
-  -- (0.9*\cardwidth, 0.4*\cardwidth)
-  -- (0.9*\cardwidth, 0.6*\cardwidth)
-  -- (0.7*\cardwidth, 0.6*\cardwidth)
-  -- cycle;          
-
-  \filldraw[#1,draw=black]
-  (0.7*\cardwidth,    0.7*\cardwidth)
-  -- (0.9*\cardwidth, 0.7*\cardwidth)
-  -- (0.9*\cardwidth, 0.9*\cardwidth)
-  -- (0.7*\cardwidth, 0.9*\cardwidth)
-  -- cycle;          
-
-  \filldraw[#2,draw=black]
-  (0.1*\cardwidth,    \cardheight-0.1*\cardwidth)
-  -- (0.3*\cardwidth, \cardheight-0.1*\cardwidth)
-  -- (0.3*\cardwidth, \cardheight-0.3*\cardwidth)
-  -- (0.1*\cardwidth, \cardheight-0.3*\cardwidth)
-  -- cycle;          
-  
+  \placetile{#1}{7}{1}
+  \placetile{#1}{7}{4}
+  \placetile{#1}{7}{7}
+  \placetile{#2}{1}{11}
+   
 \end{tikzpicture}}
 
 \newcommand{\pairtiles}[2]{
 \begin{tikzpicture}
 
-  \draw[black] \shapeCard;
+  \draw[black, line width=3pt] \shapeCard;
 
-  \filldraw[#1,draw=black]
-  (0.7*\cardwidth,    0.1*\cardwidth)
-  -- (0.9*\cardwidth, 0.1*\cardwidth)
-  -- (0.9*\cardwidth, 0.3*\cardwidth)
-  -- (0.7*\cardwidth, 0.3*\cardwidth)
-  -- cycle;          
+  \placetile{#1}{7}{1}
+  \placetile{#1}{7}{4}
 
-  \filldraw[#1,draw=black]
-  (0.7*\cardwidth,    0.4*\cardwidth)
-  -- (0.9*\cardwidth, 0.4*\cardwidth)
-  -- (0.9*\cardwidth, 0.6*\cardwidth)
-  -- (0.7*\cardwidth, 0.6*\cardwidth)
-  -- cycle;          
-
-  \filldraw[#2,draw=black]
-  (0.1*\cardwidth,    \cardheight-0.1*\cardwidth)
-  -- (0.3*\cardwidth, \cardheight-0.1*\cardwidth)
-  -- (0.3*\cardwidth, \cardheight-0.3*\cardwidth)
-  -- (0.1*\cardwidth, \cardheight-0.3*\cardwidth)
-  -- cycle;          
-
-  \filldraw[#2,draw=black]
-  (0.1*\cardwidth,    \cardheight-0.4*\cardwidth)
-  -- (0.3*\cardwidth, \cardheight-0.4*\cardwidth)
-  -- (0.3*\cardwidth, \cardheight-0.6*\cardwidth)
-  -- (0.1*\cardwidth, \cardheight-0.6*\cardwidth)
-  -- cycle;          
-  
+  \placetile{#2}{1}{11}
+  \placetile{#2}{1}{8}
 \end{tikzpicture}}
 
 \newcommand{\twotiles}[3]{
 \begin{tikzpicture}
 
-  \draw[black] \shapeCard;
+  \draw[black, line width=3pt] \shapeCard;
+  
+  \placetile{#1}{7}{1}
+  \placetile{#1}{7}{4}
 
-  \filldraw[#1,draw=black]
-  (0.7*\cardwidth,    0.1*\cardwidth)
-  -- (0.9*\cardwidth, 0.1*\cardwidth)
-  -- (0.9*\cardwidth, 0.3*\cardwidth)
-  -- (0.7*\cardwidth, 0.3*\cardwidth)
-  -- cycle;          
+  \placetile{#2}{1}{11}
 
-  \filldraw[#1,draw=black]
-  (0.7*\cardwidth,    0.4*\cardwidth)
-  -- (0.9*\cardwidth, 0.4*\cardwidth)
-  -- (0.9*\cardwidth, 0.6*\cardwidth)
-  -- (0.7*\cardwidth, 0.6*\cardwidth)
-  -- cycle;          
-
-  \filldraw[#2,draw=black]
-  (0.1*\cardwidth,    \cardheight-0.1*\cardwidth)
-  -- (0.3*\cardwidth, \cardheight-0.1*\cardwidth)
-  -- (0.3*\cardwidth, \cardheight-0.3*\cardwidth)
-  -- (0.1*\cardwidth, \cardheight-0.3*\cardwidth)
-  -- cycle;          
-
-  \filldraw[#3,draw=black]
-  (0.1*\cardwidth,    0.1*\cardwidth)
-  -- (0.3*\cardwidth, 0.1*\cardwidth)
-  -- (0.3*\cardwidth, 0.3*\cardwidth)
-  -- (0.1*\cardwidth, 0.3*\cardwidth)
-  -- cycle;          
+  \placetile{#3}{1}{1}
   
 \end{tikzpicture}}
 
 \newcommand{\onetiles}[4]{
 \begin{tikzpicture}
 
-  \draw[black] \shapeCard;
+  \draw[black, line width=3pt] \shapeCard;
 
-  \filldraw[#1,draw=black]
-  (0.1*\cardwidth,    0.1*\cardwidth)
-  -- (0.3*\cardwidth, 0.1*\cardwidth)
-  -- (0.3*\cardwidth, 0.1*\cardwidth+0.2*\cardwidth)
-  -- (0.1*\cardwidth, 0.1*\cardwidth+0.2*\cardwidth)
-  -- cycle;          
-
-  \filldraw[#2,draw=black]
-  (0.7*\cardwidth,    0.1*\cardwidth)
-  -- (0.9*\cardwidth, 0.1*\cardwidth)
-  -- (0.9*\cardwidth, 0.1*\cardwidth+0.2*\cardwidth)
-  -- (0.7*\cardwidth, 0.1*\cardwidth+0.2*\cardwidth)
-  -- cycle;          
-
-  \filldraw[#3,draw=black]
-  (0.1*\cardwidth,    \cardheight-0.1*\cardwidth)
-  -- (0.3*\cardwidth, \cardheight-0.1*\cardwidth)
-  -- (0.3*\cardwidth, \cardheight-0.3*\cardwidth)
-  -- (0.1*\cardwidth, \cardheight-0.3*\cardwidth)
-  -- cycle;          
-
-  \filldraw[#4,draw=black]
-  (0.7*\cardwidth,    \cardheight-0.1*\cardwidth)
-  -- (0.9*\cardwidth, \cardheight-0.1*\cardwidth)
-  -- (0.9*\cardwidth, \cardheight-0.3*\cardwidth)
-  -- (0.7*\cardwidth, \cardheight-0.3*\cardwidth)
-  -- cycle;          
-  
+  \placetile{#1}{1}{1}
+  \placetile{#2}{7}{1}
+  \placetile{#3}{1}{11}
+  \placetile{#4}{7}{11}
 \end{tikzpicture}}
 
 \newcommand{\marketcard}[4]{
 \begin{tikzpicture}
 
-  \draw[black] \shapeCard;
+  \draw[black, line width=3pt] \shapeCard;
 
   \filldraw[#1,draw=black]
   (0.2*\cardwidth,    0.25*\cardheight)
@@ -214,7 +156,7 @@
 \newcommand{\ordercard}[4]{
 \begin{tikzpicture}
 
-  \draw[black] \shapeCard;
+  \draw[black, line width=3pt] \shapeCard;
 
     \fill[royalazure] (0,0) -- (0,\cardheight/2) -- (\cardwidth/2, \cardheight/2) -- (\cardwidth/2, 0) -- cycle;
     \fill[red]  ((\cardwidth/2,0)  -- (\cardwidth,0)     -- (\cardwidth,\cardheight/2)        -- (\cardwidth/2, \cardheight/2) -- cycle;
@@ -261,7 +203,7 @@
 
 \newcommand{\playercard}{
 \begin{tikzpicture}
-    \draw[black] \shapeCard;
+    \draw[black, line width=3pt] \shapeCard;
 
     \fill[royalazure] (0,0) -- (0,\cardheight/2) -- (\cardwidth/2, \cardheight/2) -- (\cardwidth/2, 0) -- cycle;
     \fill[red]  ((\cardwidth/2,0)  -- (\cardwidth,0)     -- (\cardwidth,\cardheight/2)        -- (\cardwidth/2, \cardheight/2) -- cycle;
@@ -273,7 +215,7 @@
 \newcommand{\rulescard}[1]{
 \begin{tikzpicture}
 
-  \draw[black] \shapeCard;
+  \draw[black, line width=3pt] \shapeCard;
 
   \node[below right] at (0.1*\cardwidth,\cardheight-0.1*\cardwidth) {#1};
    
@@ -287,30 +229,33 @@
 \renewcommand{\arraystretch}{0}
 
 
-
-\begin{table}[h]
+\begin{table}[ht]
   \centering
   \begin{tabular}{|c|c|c|}
-    \threetiles{red}{royalazure}&
-    \threetiles{royalazure}{lightskyblue} &
-    \threetiles{lightskyblue}{yellow} \\
-    \threetiles{yellow}{red} &
-    \pairtiles{royalazure}{yellow} &
-    \pairtiles{royalazure}{red} \\
-    \pairtiles{lightskyblue}{yellow} &
-    \pairtiles{red}{lightskyblue} &
-    \onetiles{royalazure}{red}{yellow}{lightskyblue}
-  \end{tabular}
+    \tilecard{3}{0}{0}{1} &
+    \tilecard{0}{3}{1}{0} &
+    \tilecard{1}{0}{3}{0} \\
+    \tilecard{0}{2}{0}{2} &
+    \tilecard{2}{2}{0}{0} &
+    \tilecard{0}{1}{0}{3}\\
+    \tilecard{2}{0}{2}{0} &
+    \tilecard{0}{0}{2}{2} &
+    \tilecard{1}{1}{1}{1}
+  \end{tabular}%
+  \hskip\headheight  
 \end{table}
+
+
+
 
 % https://socratic.org/questions/how-do-you-write-all-permutations-of-the-letters-a-b-c-d#419492
 
 
-\begin{table}[h]
+\begin{table}[ht]
   \centering
   \begin{tabular}{|c|c|c|}
-    \ordercard{1}{2}{3}{4} &
     \ordercard{1}{2}{4}{3} &
+    \ordercard{1}{2}{3}{4} &
     \ordercard{1}{3}{2}{4} \\
     \ordercard{1}{3}{4}{2} &
     \ordercard{2}{1}{4}{3} &
@@ -322,10 +267,24 @@
   \hskip\headheight
 \end{table}
 
-
-\begin{table}[h]
+\begin{table}[ht]
   \centering
   \begin{tabular}{|c|c|c|}
+    \tilecard{2}{1}{0}{1} &
+    \tilecard{1}{2}{1}{0} &
+    \tilecard{1}{0}{2}{1} \\
+    \tilecard{1}{2}{0}{1} &
+    \tilecard{0}{1}{1}{2} &
+    \tilecard{1}{0}{2}{1}\\
+    \tilecard{1}{1}{2}{0}  &
+    \tilecard{1}{0}{1}{2}  &
+    %\onetiles{yellow}{royalazure}{lightskyblue}{red}
+    \tilecard{1}{1}{1}{1}
+
+  \end{tabular}%
+  \hskip\headheight
+\end{table}
+    \iffalse
     \twotiles{yellow}{red}{royalazure} &
     \twotiles{royalazure}{yellow}{lightskyblue} &
     \twotiles{royalazure}{yellow}{red} \\
@@ -334,12 +293,11 @@
     \twotiles{yellow}{red}{lightskyblue} \\
     \twotiles{lightskyblue}{royalazure}{yellow}  &
     \twotiles{red}{lightskyblue}{yellow}  &
-    \onetiles{royalazure}{red}{yellow}{lightskyblue} 
-  \end{tabular}%
-  \hskip\headheight
-\end{table}
+    %\onetiles{yellow}{royalazure}{lightskyblue}{red}
+    \tilecard{1}{1}{1}{1}
+    \fi
 
-\begin{table}[h]
+\begin{table}[ht]
   \centering
   \begin{tabular}{|c|c|c|}
     \ordercard{3}{2}{1}{4} &
@@ -354,6 +312,7 @@
   \end{tabular}%
   \hskip\headheight
 \end{table}
+
 
 
 \end{document}
