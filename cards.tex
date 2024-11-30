@@ -38,33 +38,54 @@
   \def\x{#2/10*\cardwidth}
   \def\y{#3/10*\cardwidth}
   \def\tilewidth{0.2*\cardwidth}
-  
+
   \filldraw[#1,draw=black]
   (\x,               \y)
   -- (\x+\tilewidth, \y)
   -- (\x+\tilewidth, \y+\tilewidth)
   -- (\x,            \y+\tilewidth)
-  -- cycle;        
+  -- cycle;
+
+  \ifthenelse{\equal{#1}{yellow}}{% 
+    \node at (\x+0.25in, \y+0.25in)
+          {\includegraphics[width=0.5in]{estrella_polar.png}};
+  }{
+    \ifthenelse{\equal{#1}{red}}{% 
+    \node at (\x+0.25in, \y+0.25in)
+          {\includegraphics[width=0.5in]{flor_de_corazones.png}};
+    }{
+      \ifthenelse{\equal{#1}{royalazure}}{% 
+        \node at (\x+0.25in, \y+0.25in)
+              {\includegraphics[width=0.5in]{royal_completo.png}};
+      }{
+        \ifthenelse{\equal{#1}{lightskyblue}}{% 
+          \node at (\x+0.25in, \y+0.25in)
+                {\includegraphics[width=0.5in]{fuente_real.png}};
+        }{
+        }
+      }
+    }
+  }
 }
 
 \newcommand{\tilecard}[4]{
 \begin{tikzpicture}
   \draw[black, line width=3pt] \shapeCard;
 
-  \ifnum0#1>0 \placetile{yellow}{1}{11} \fi
-  \ifnum0#1>1 \placetile{yellow}{1}{8} \fi
+  \ifnum0#1>0 \placetile{yellow}{1}{9} \fi
+  \ifnum0#1>1 \placetile{yellow}{1}{7} \fi
   \ifnum0#1>2 \placetile{yellow}{1}{5} \fi
 
-  \ifnum0#2>0 \placetile{royalazure}{7}{11} \fi
-  \ifnum0#2>1 \placetile{royalazure}{7}{8} \fi
-  \ifnum0#2>2 \placetile{royalazure}{7}{5} \fi
+  \ifnum0#2>0 \placetile{royalazure}{5}{11} \fi
+  \ifnum0#2>1 \placetile{royalazure}{3}{11} \fi
+  \ifnum0#2>2 \placetile{royalazure}{1}{11} \fi
 
-  \ifnum0#3>0 \placetile{lightskyblue}{1}{1} \fi
-  \ifnum0#3>1 \placetile{lightskyblue}{1}{4} \fi
-  \ifnum0#3>2 \placetile{lightskyblue}{1}{7} \fi
+  \ifnum0#3>0 \placetile{lightskyblue}{3}{1} \fi
+  \ifnum0#3>1 \placetile{lightskyblue}{5}{1} \fi
+  \ifnum0#3>2 \placetile{lightskyblue}{7}{1} \fi
 
-  \ifnum0#4>0 \placetile{red}{7}{1} \fi
-  \ifnum0#4>1 \placetile{red}{7}{4} \fi
+  \ifnum0#4>0 \placetile{red}{7}{3} \fi
+  \ifnum0#4>1 \placetile{red}{7}{5} \fi
   \ifnum0#4>2 \placetile{red}{7}{7} \fi
 \end{tikzpicture}}
 
@@ -158,12 +179,39 @@
 
   \draw[black, line width=3pt] \shapeCard;
 
-    \fill[royalazure] (0,0) -- (0,\cardheight/2) -- (\cardwidth/2, \cardheight/2) -- (\cardwidth/2, 0) -- cycle;
-    \fill[red]  ((\cardwidth/2,0)  -- (\cardwidth,0)     -- (\cardwidth,\cardheight/2)        -- (\cardwidth/2, \cardheight/2) -- cycle;
-    \fill[yellow]    (0,\cardheight/2) -- (0,\cardheight) -- (\cardwidth/2,\cardheight)  -- (\cardwidth/2, \cardheight/2) -- cycle;
-    \fill[lightskyblue]  (\cardwidth/2,\cardheight/2)  -- (\cardwidth/2,\cardheight)  -- (\cardwidth,\cardheight) -- (\cardwidth, \cardheight/2) -- cycle;
+  \fill[royalazure] (0,0) -- (0,\cardheight/2) -- (\cardwidth/2, \cardheight/2) -- (\cardwidth/2, 0) -- cycle;
+  \fill[red]  ((\cardwidth/2,0)  -- (\cardwidth,0)     -- (\cardwidth,\cardheight/2)        -- (\cardwidth/2, \cardheight/2) -- cycle;
+  \fill[yellow]    (0,\cardheight/2) -- (0,\cardheight) -- (\cardwidth/2,\cardheight)  -- (\cardwidth/2, \cardheight/2) -- cycle;
+  \fill[lightskyblue]  (\cardwidth/2,\cardheight/2)  -- (\cardwidth/2,\cardheight)  -- (\cardwidth,\cardheight) -- (\cardwidth, \cardheight/2) -- cycle;
   
+  \placetile{yellow}{0}{12}
+  \placetile{yellow}{3}{12}
+  \placetile{yellow}{0}{7}
+  \placetile{yellow}{3}{7}
+  \placetile{yellow}{0}{9.5}
+  \placetile{yellow}{3}{9.5}
 
+  \placetile{lightskyblue}{8}{12}
+  \placetile{lightskyblue}{5}{12}
+  \placetile{lightskyblue}{8}{7}
+  \placetile{lightskyblue}{5}{7}
+  \placetile{lightskyblue}{5}{9.5}
+  \placetile{lightskyblue}{8}{9.5}
+
+  \placetile{royalazure}{0}{0}
+  \placetile{royalazure}{3}{0}
+  \placetile{royalazure}{0}{5}
+  \placetile{royalazure}{3}{5}
+  \placetile{royalazure}{0}{2.5}
+  \placetile{royalazure}{3}{2.5}
+  
+  \placetile{red}{8}{0}
+  \placetile{red}{8}{5}
+  \placetile{red}{5}{5}
+  \placetile{red}{5}{0}
+  \placetile{red}{5}{2.5}
+  \placetile{red}{8}{2.5}
+  
   \filldraw[white,draw=black]
   (0.15*\cardwidth,    0.25*\cardheight-0.1*\cardwidth)
   -- (0.35*\cardwidth, 0.25*\cardheight-0.1*\cardwidth)
