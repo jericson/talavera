@@ -70,7 +70,7 @@
 
 \newcommand{\tilecard}[4]{
 \begin{tikzpicture}
-  \draw[black, line width=3pt, use as bounding box] \shapeCard;
+  \draw[white, line width=0pt, use as bounding box] \shapeCard;
 
   \ifnum0#1>0 \placetile{yellow}{0.5}{9} \fi
   \ifnum0#1>1 \placetile{yellow}{0.5}{7} \fi
@@ -279,7 +279,7 @@
 
 \begin{table}[ht]
   \centering
-  \begin{tabular}{|c|c|c|}
+  \begin{tabular}{ccc}
     \tilecard{3}{0}{0}{1} &
     \tilecard{0}{3}{1}{0} &
     \tilecard{1}{0}{3}{0} \\
@@ -317,7 +317,7 @@
 
 \begin{table}[ht]
   \centering
-  \begin{tabular}{|c|c|c|}
+  \begin{tabular}{ccc}
     \tilecard{2}{1}{0}{1} &
     \tilecard{1}{2}{1}{0} &
     \tilecard{1}{0}{2}{1} \\
