@@ -48,7 +48,7 @@
 
   \ifthenelse{\equal{#1}{yellow}}{% 
     \node at (\x+0.25in, \y+0.25in)
-          {\includegraphics[width=0.5in]{estrella_polar.png}};
+          {\includegraphics[width=0.5in]{fuente_real.png}};
   }{
     \ifthenelse{\equal{#1}{red}}{% 
     \node at (\x+0.25in, \y+0.25in)
@@ -56,11 +56,11 @@
     }{
       \ifthenelse{\equal{#1}{royalazure}}{% 
         \node at (\x+0.25in, \y+0.25in)
-              {\includegraphics[width=0.5in]{royal_completo.png}};
+              {\includegraphics[width=0.5in]{flores_romanescos.png}};
       }{
         \ifthenelse{\equal{#1}{lightskyblue}}{% 
           \node at (\x+0.25in, \y+0.25in)
-                {\includegraphics[width=0.5in]{fuente_real.png}};
+                {\includegraphics[width=0.5in]{escamalla_azul.png}};
         }{
         }
       }
@@ -70,23 +70,23 @@
 
 \newcommand{\tilecard}[4]{
 \begin{tikzpicture}
-  \draw[black, line width=3pt] \shapeCard;
+  \draw[black, line width=3pt, use as bounding box] \shapeCard;
 
-  \ifnum0#1>0 \placetile{yellow}{1}{9} \fi
-  \ifnum0#1>1 \placetile{yellow}{1}{7} \fi
-  \ifnum0#1>2 \placetile{yellow}{1}{5} \fi
+  \ifnum0#1>0 \placetile{yellow}{0.5}{9} \fi
+  \ifnum0#1>1 \placetile{yellow}{0.5}{7} \fi
+  \ifnum0#1>2 \placetile{yellow}{0.5}{5} \fi
 
-  \ifnum0#2>0 \placetile{royalazure}{5}{11} \fi
-  \ifnum0#2>1 \placetile{royalazure}{3}{11} \fi
-  \ifnum0#2>2 \placetile{royalazure}{1}{11} \fi
+  \ifnum0#2>0 \placetile{royalazure}{5}{11.5} \fi
+  \ifnum0#2>1 \placetile{royalazure}{3}{11.5} \fi
+  \ifnum0#2>2 \placetile{royalazure}{1}{11.5} \fi
 
-  \ifnum0#3>0 \placetile{lightskyblue}{3}{1} \fi
-  \ifnum0#3>1 \placetile{lightskyblue}{5}{1} \fi
-  \ifnum0#3>2 \placetile{lightskyblue}{7}{1} \fi
+  \ifnum0#3>0 \placetile{lightskyblue}{3}{0.5} \fi
+  \ifnum0#3>1 \placetile{lightskyblue}{5}{0.5} \fi
+  \ifnum0#3>2 \placetile{lightskyblue}{7}{0.5} \fi
 
-  \ifnum0#4>0 \placetile{red}{7}{3} \fi
-  \ifnum0#4>1 \placetile{red}{7}{5} \fi
-  \ifnum0#4>2 \placetile{red}{7}{7} \fi
+  \ifnum0#4>0 \placetile{red}{7.5}{3} \fi
+  \ifnum0#4>1 \placetile{red}{7.5}{5} \fi
+  \ifnum0#4>2 \placetile{red}{7.5}{7} \fi
 \end{tikzpicture}}
 
 \newcommand{\threetiles}[2]{
@@ -177,7 +177,7 @@
 \newcommand{\ordercard}[4]{
 \begin{tikzpicture}
 
-  \draw[black, line width=3pt] \shapeCard;
+  \draw[black, line width=3pt, use as bounding box] \shapeCard;
 
   \fill[royalazure] (0,0) -- (0,\cardheight/2) -- (\cardwidth/2, \cardheight/2) -- (\cardwidth/2, 0) -- cycle;
   \fill[red]  ((\cardwidth/2,0)  -- (\cardwidth,0)     -- (\cardwidth,\cardheight/2)        -- (\cardwidth/2, \cardheight/2) -- cycle;
@@ -240,10 +240,10 @@
   -- (0.65*\cardwidth, 0.75*\cardheight+0.1*\cardwidth)
   -- cycle;          
 
-  \node at (0.25*\cardwidth,0.75*\cardheight) {\Huge #1};
-  \node at (0.75*\cardwidth,0.75*\cardheight) {\Huge #2};
-  \node at (0.25*\cardwidth,0.25*\cardheight) {\Huge #3};
-  \node at (0.75*\cardwidth,0.25*\cardheight) {\Huge #4};
+  \node at (0.25*\cardwidth,0.75*\cardheight) {\Huge \textbf{#1}};
+  \node at (0.75*\cardwidth,0.75*\cardheight) {\Huge \textbf{#2}};
+  \node at (0.25*\cardwidth,0.25*\cardheight) {\Huge \textbf{#3}};
+  \node at (0.75*\cardwidth,0.25*\cardheight) {\Huge \textbf{#4}};
   
 \end{tikzpicture}}
 

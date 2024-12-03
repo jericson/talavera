@@ -54,9 +54,9 @@ drafted. (Don't forget to swap who drafts first!)
 
 ### Winning
 
-When all the cards have been drafted and both players have all four
-corners covered, the game is over and each player evaluates how well
-they completed the orders.
+When all the cards have been drafted and both players have tucked a
+total of 8 cards under their order card, the game is over and each
+player evaluates how well they completed the orders.
 
 In order to fill an order, there must be _at least_ as many tiles of
 that color as indicated by the number on the order. Score each order
@@ -84,31 +84,35 @@ separately and add up the total score.
 
 Add the total score for all four orders and highest score wins.
 
-In case of a tie, congratulate each other on a job well done!
+In case of a tie, play a second game!
 
 
 ## Solo rules
 
 As in the two-player game, solo Talavera consists of 4 rounds of two
 phases. However, instead of completing specific orders, the goal is to
-decorate a flight of stairs with 4 different colors. Ignore the
-numbers on the order card.
+decorate a flight of stairs with 4 different colors. 
+
+Shuffle the cards and randomly select an order card to organize
+placement. Ignore the numbers on the order card.
 
 ### Draft phase (solo)
 
-Shuffle the deck and place the solo rules on top to cover the top
-card. Deal two cards from the bottom of the deck with their tile
-side face up. Select one card and discard the other. Repeat the
-process with two more cards so that you have a two tile cards to place.
+Deal two cards from the bottom of the deck with their tile side face
+up. Select one card and discard the other. Repeat the process with two
+more cards so that you have a two tile cards to place.
 
 **Once per game**: Instead of taking one of a pair of cards, discard
-both cards and randomly draw a card from the deck to keep. 
+both cards and randomly draw a card from the deck to keep. You must
+place that card no matter what you turn up.
 
 ### Placement phase (solo)
 
-**Unlike the two-player game**, cover one corner of the order card with
-all the tile cards you selected that round. However, you may place
-cards on a corner that does not have a corresponding tile.
+**Unlike the two-player game**, tuck both cards you selected that
+round under one corner of the order card. Each round you must select a
+single color order to fill and you may not add to it in future
+rounds. You may, however, place a card that does not have a
+corresponding tile.
 
 > **Example**: If you have a card with one red tile and the other has
 > no red tiles, you may place both cards on the red corner to claim
@@ -127,7 +131,7 @@ If you place _any_ excess tiles, you have lost the game.
 
 > **Example**: Starting the fourth and final draft phase, you have
 > placed 2 yellow, 3 reds, and 4 azure tiles. In order to win, you
-> must draft exactly 1 sky blue tiles.
+> must draft exactly 1 sky blue tile.
 
 **Extra special win**: place _exactly_ the customer's order according
 to the numbers on the order card. (Warning: this involves quite a bit
@@ -163,15 +167,22 @@ tiles on all 18 cards to avoid card counting. He also came up with the
 idea for giving the first player to draft a choice of two cards
 instead of all four.
 
-I'm considering an explicit cooperative mode. One of the things I like
-about Azul is that people naturally play in the interest of their own
-goals without worrying too much about other players. Cutthroat play
-comes with experience. 
+Wojts, also from the Decision Space community, gave me an idea for
+arraigning the tiles on the cards so that they spay nicely and
+unveiled the illusion of decision that I'd carried from an early
+version of the rules. He graciously play-tested the new rules and gave
+me confidence they are an improvement.
 
 Based on player feedback, I added a simple scoring system to encourage
 a more relaxed way to play. It's still a zero sum game, but scoring
 makes it possible to lose by a small amount. Often a close game feels
 better for the loser than a binary win or lose end state.
+
+
+I'm considering an explicit cooperative mode. One of the things I like
+about Azul is that people naturally play in the interest of their own
+goals without worrying too much about other players. Cutthroat play
+comes with experience. 
 
 
 Drafting games resist a satisfying solo mode. There is [a fan-made solo
@@ -194,6 +205,14 @@ to decorate our front steps. (See the image at the top of this page.)
 At some point I might replace the solid squares with authentic tile
 designs. This would have the added advantage of avoiding problems for
 colorblind players.
+
+### Technical notes
+
+To create the title image, I used:
+
+```
+magick steps.jpg -gravity south  -font Palatino -pointsize 600  -stroke black -strokewidth 10 -fill gold2 -annotate 0 'Talavera' talavera.jpg
+```
 
 <!--
 In Talavera, all information is open so the market can be manipulated to force your opponent to take cards they don't want or leave cards you need. Even though it's a 5 minute game, there are strategic considerations for placing tiles.
