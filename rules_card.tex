@@ -1,0 +1,179 @@
+\documentclass[letterpaper]{article}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+%\usepackage{color}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz}
+\usetikzlibrary{patterns, shadows, positioning}
+\usetikzlibrary{shapes.geometric}
+%\usepackage{pifont}
+\usepackage{fourier-orns}
+\usepackage[hmargin=0mm,vmargin=0mm, letterpaper]{geometry}
+\usepackage{tabularx}
+\usepackage{epsdice}
+\usepackage{url}
+
+%\setlength{\parindent}{0cm}
+
+\definecolor{titlebg}{rgb}{30, 30 , 30}
+
+% https://latexcolor.com/
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{royalazure}{rgb}{0.0, 0.22, 0.66}
+\definecolor{lightskyblue}{rgb}{0.53, 0.81, 0.98}
+\definecolor{qr}{rgb}{1,1,1}
+
+
+\def\cardwidth{2.5in}
+\def\cardheight{3.5in}
+
+\def\ruleswidth{2in}
+
+\def\shapeCard{(0,0) rectangle (\cardwidth, \cardheight)}
+
+\tikzset{%
+  square/.style={regular polygon,regular polygon sides=4}
+}
+
+
+\newcommand{\rulescard}[1]{
+\begin{tikzpicture}
+
+  \draw[white, line width=0pt] \shapeCard;
+
+  \node[below right] at (0.1*\cardwidth,\cardheight-0.1*\cardwidth) [text width = 0.8*\cardwidth] {\setlength{\parindent}{15pt}#1};
+   
+\end{tikzpicture}}
+
+
+\begin{document}
+
+% https://tex.stackexchange.com/questions/56101/spaces-between-rows-and-cols-in-a-table-better-ways-than-mine
+\setlength\tabcolsep{0pt}
+\renewcommand{\arraystretch}{0}
+
+
+
+
+
+
+% https://socratic.org/questions/how-do-you-write-all-permutations-of-the-letters-a-b-c-d#419492
+
+
+
+
+\def\titlecard{%
+  \textbf{Talavera} is a game of fulfilling customer orders in 4
+  rounds of two phases: \textbf{draft} cards and \textbf{place} tiles. When
+  all the cards have been drafted and placed, players \textbf{score}
+  according to the number of fulfilled orders and wasted tiles.
+  
+  One side of each card has four numbered rectangles and represents a
+  unique customer \textbf{order}. The other side has four square
+  \textbf{tiles} grouped by color which players will draft to
+  fulfill that order.
+
+  \begin{centering}
+    \includegraphics[width=0.5in]{qr.png}
+    
+    \footnotesize{\url{https://jlericson.com/talavera/}}
+  \end{centering}
+}
+
+\def\draftcard{%
+  \textbf{Draft Phase}
+      
+  Shuffle the cards and give each player an order card. Whichever
+  player has the smallest number (reading clockwise starting with
+  yellow) on their order is the first player.
+
+  Place four cards on the table with the order side up to form the
+  market. The first player flips two cards and selects one to
+  keep. The second player flips the other two cards and selects one of
+  the three cards remaining in the market.
+      
+  Take turns drafting one card until the market is empty and you have
+  two cards to place.  }
+
+\def\placementcard{%
+  \textbf{Place Phase}
+      
+  Tuck each drafted card under one corner of your order card so that
+  all the tiles of that color are visible.
+  
+  \textbf{Note}: Only one tile color on each drafted card counts
+  toward your score.
+
+  You may place both cards under the same color or different
+  colors. You may also add tiles to a color you have already
+  placed. Do not place a card under a color that isn't represented by
+  at least one tile on that card.
+
+  Swap who drafts fist and continue drafting tiles until
+  all the cards have been placed.
+}
+
+\def\scoringcard{%
+  \textbf{Score}
+      
+  In order to fill an order, there must be \textit{at least} as many tiles of
+  that color as indicated by the number on the order.
+
+  \begin{itemize}
+    \setlength\itemsep{0em}
+  \item Each fulfilled order is 3 points.
+  \item Subtract 1 point for each excess tile. Orders can't go below 0.
+  \item If there are fewer of a color than required, the order is worth 0 points.
+  \end{itemize}
+
+  In case of a tie, play best two out of three games.
+}
+
+\def\logocard{%
+  \begin{centering}
+    \includegraphics[width = 3in, angle=90]{talavera.jpg}
+  \end{centering}
+}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|cc|c}
+    \hline\\
+    \rulescard{\scoringcard} &
+    \rulescard{\titlecard} &
+    \rulescard{\logocard} \\
+    \hline
+    \rulescard{\scoringcard} &
+    \rulescard{\titlecard} &
+    \rulescard{\logocard} \\
+    \hline
+    \rulescard{\scoringcard} &
+    \rulescard{\titlecard} &
+    \rulescard{\logocard}\\
+    \hline
+  \end{tabular}%
+  \hskip\headheight
+\end{table}
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{ccc}
+%    \hline
+    \rulescard{} &
+    \rulescard{\draftcard} &
+    \rulescard{\placementcard} \\
+%    \hline
+    \rulescard{} &
+    \rulescard{\draftcard} &
+    \rulescard{\placementcard} \\
+   \rulescard{} &
+    \rulescard{\draftcard} &
+    \rulescard{\placementcard}
+  \end{tabular}%
+  \hskip\headheight
+\end{table}
+
+
+
+
+\end{document}
