@@ -214,6 +214,22 @@ To create the title image, I used:
 magick steps.jpg -gravity south  -font Palatino -pointsize 600  -stroke black -strokewidth 10 -fill gold2 -annotate 0 'Talavera' talavera.jpg
 ```
 
+<script src="https://giscus.app/client.js"
+        data-repo="jericson/talavera"
+        data-repo-id="R_kgDOMZwuUA"
+        data-category="General"
+        data-category-id="DIC_kwDOMZwuUM4Cm6nJ"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
 <!--
 In Talavera, all information is open so the market can be manipulated to force your opponent to take cards they don't want or leave cards you need. Even though it's a 5 minute game, there are strategic considerations for placing tiles.
 
